@@ -39,8 +39,8 @@
                     }
                     elseif( $_GET['page']=='search_result')
                     {
+                        require("../modele/search_ad.php"); //modele
                         include("../view/search_result.php"); //vue
-                        include("../modele/search_ad.php"); //modele
                     }
                     elseif( $_GET['page']=='my_profile')
                     {
