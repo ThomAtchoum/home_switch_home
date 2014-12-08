@@ -77,6 +77,15 @@
                         include("../view/topic.php");//vue
                         include("../modele/search_topic.php"); //modele
                     }
+                    elseif( $_GET['page']=='formUser')
+                    {
+                        include("../view/form_user.php");//vue
+                    }
+                    elseif( $_GET['page']=='confirmAddUser')
+                    {
+                        //include("../view/confirm_add_user.php");//vue
+                        require("../modele/add_user.php"); //modele
+                    }
                     
                 }
                    

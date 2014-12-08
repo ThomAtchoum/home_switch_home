@@ -15,7 +15,7 @@
 		<fieldset>
 		<legend>Vos coordonnées</legend>
 
-		<form method="post" action="insertionbdd.php">
+		<form method="post" action="content.php?page=confirmAddUser">
 			<p>
 				<label>Nom</label> : <input type="text" name="nom" id="Nom" placeholder="Ex:Hasselhof" />
 			</p>
@@ -53,7 +53,7 @@
 
 	<script src="formulaireinscription.js"></script>
 
-        <form method="post" action="comparaisonpass.php">
+       
 			<p>
 				<label for="pass">Mot de passe*</label>
 				<input type="password" name="pass" id="pass" />
@@ -66,7 +66,7 @@
 				<input type="password" name="repass" id="repass" />
 			</p>
 		
-        </form>	
+        
 		
 		
 			<p>
