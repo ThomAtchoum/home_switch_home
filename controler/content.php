@@ -31,7 +31,7 @@
                 
                     {
                         include("../view/home.php");
-                        include("../modele/search_home.php"); //modele
+                        include("../view/style_caroussel.php"); //modele
                     }   
                     elseif( $_GET['page']=='research')
                     {

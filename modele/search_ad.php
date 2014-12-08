@@ -71,7 +71,7 @@ $reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, ho
     //layouts
    
     $ask=$reqBase.$req; 
-    echo $ask;
+    
     
     
         function fctLayout($name)
@@ -82,13 +82,10 @@ $reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, ho
                         
         if (isset($_POST[$name]) AND $_POST[$name] === 'on') 
         {
-            $ask=$ask.' AND criteria_house.name=\''.$name.'\' INTERSECT '.$reqBase;
+            $ask=$ask.' OR criteria_house.name=\''.$name.'\'';
             
         }
-        else
-        {
-            echo 'caca';
-        }
+        
  
     }
     
@@ -110,7 +107,7 @@ $reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, ho
     
     fctLayout('disabledAccess');
     
-    $ask=$ask.$reqBase; // on empeche le intersect de tourner dans le vide
+    
     echo '<br/>'.$ask;
     
     //on prend en compte les critères animaux.
