@@ -70,7 +70,7 @@
                             <p>
                             Nombre de personnes:<br/>
 				  <!--Menu déroulant jour fin-->
-				<input type="range" min="0" max="10" name="nbrPeople" value="1" oninput="document.getElementById('AfficheRangePeople').textContent=value" set="1"/>
+				<input type="range" min="1" max="10" name="nbrPeople" value="1" oninput="document.getElementById('AfficheRangePeople').textContent=value" set="1"/>
                                 <span id="AfficheRangePeople">1</span>
                             <br/>
                             
@@ -83,7 +83,7 @@
                         <p>
                             Nombre de chambres:<br/>
                         
-                                <input type="range" name="nbrRooms" min="0" max="10" value="1" oninput="document.getElementById('AfficheRangeRoom').textContent=value" />
+                                <input type="range" name="nbrRooms" min="1" max="10" value="1" oninput="document.getElementById('AfficheRangeRoom').textContent=value" />
                                 <span id="AfficheRangeRoom">1</span>
                         </p>
                         

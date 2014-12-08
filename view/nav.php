@@ -2,7 +2,7 @@
 <nav>
 
 <ul class="linkBlockList">
-	<li class="linkBlockElement"><a class="linkBlock" href="../controler/content.php?page=index" >Accueil</a></li>
+	<li class="linkBlockElement"><a class="linkBlock" href="../controler/content.php?page=home" >Accueil</a></li>
 	<li class="linkBlockElement"><a class="linkBlock" href="../controler/content.php?page=news" >News</a></li>
 	<li class="linkBlockElement"><a class="linkBlock" href="../controler/content.php?page=research" >Recherche</a></li>
 	<li class="subMenuDisplayer">
@@ -17,4 +17,5 @@
 	</li>
 	<li class="linkBlockElement"><a class="linkBlock" href="#help">Aide</a></li>
 </ul>
+    
 </nav>
