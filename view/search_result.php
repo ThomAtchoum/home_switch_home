@@ -1,6 +1,6 @@
 <?php
 
-require("search_ad.php");
+//require("../modele/search_ad.php");
 
 
 while($resData=$askResearch->fetch())
