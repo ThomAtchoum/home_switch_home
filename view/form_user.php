@@ -4,10 +4,9 @@
 	</header>
 	
 	<body>
-	  	<div id="picture">
-		<img src="maison.jpg" width="700" height="700" alt="maison" />
+	  	
 		<link rel="stylesheet" type="text/css" href="formulaireinscription.css" />
-		</div>
+		
 	<div id="formulaire" style="background-color: rgba(255, 255, 255, 0.7)">
 		<meta charset="utf-8" />
 		<h1>Formulaire d'inscription</h1>
@@ -15,7 +14,7 @@
 		<fieldset>
 		<legend>Vos coordonnées</legend>
 
-		<form method="post" action="content.php?page=confirmAddUser">
+		<form method="post" action="add_user.php">
 			<p>
 				<label>Nom</label> : <input type="text" name="nom" id="Nom" placeholder="Ex:Hasselhof" />
 			</p>
