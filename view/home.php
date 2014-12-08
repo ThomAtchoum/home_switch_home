@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <div id="carrousel">
-	<link rel="stylesheet" type="text/css" href="styletest.css">
+	<link rel="stylesheet" type="text/css" href="../view/style_caroussel.css">
     <ul>
     	<center><font class="testtexte" size=6 color=white>LEURS MAISONS, VOS VACANCES</font></center>
         <li><img src="http://eurowin-stats.com/media/maison%20BCBG.jpg" width=1000 height=400  /></li>
