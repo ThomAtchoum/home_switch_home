@@ -12,6 +12,6 @@
 <?php
     if (isset($_POST['Region']) AND $_POST['Region']!="")
         {
-            $insRegion=$bdd->prepare(INSERT INTO house(region));
+            $insRegion=$bdd->prepare('INSERT INTO house(region)');
         }
     
