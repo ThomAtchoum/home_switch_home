@@ -43,8 +43,6 @@ height:60px;
 .PhotosMM
 {
 padding-left:30px;
-border: solid 1px;
-width: 850px;
 float:left;
 }
 
@@ -108,5 +106,10 @@ margin-top:10px;
 {
 width:auto;
 height:auto;
+}
 
+.sub
+{
+margin-top:15px;
+float:right;
 }

@@ -7,21 +7,15 @@
     </head>
     
     <body>
-        <section class='MiddlePage'>
-                    <section class="RightCol">
+                <section class="RightCol">
+                    <form action="" method="post" id="create_house" enctype="multipart/form-data">
                         <article class='title'> <!--Insert the title-->
                             <input type="text" name="title" placeholder="titre de la maison" />
                         </article>
 			<article class="PhotosButtons"> <!--Insert the photos-->
 				<aside class="PhotosMM"> 
-					<p>
-                                            <input type="file" name="pic1"/>
-                                            <input type="file" name="pic2"/>
-                                            <input type="file" name="pic3"/>
-                                            <input type="file" name="pic4"/>
-                                            <input type="file" name="pic5"/>
-                                            <input type="file" name="pic6"/>
-                                            <input type="file" name="pic7"/>                                            
+					<p>     
+                                            <input type='file' id="photo1" />                                    
 					</p>
 				</aside>
 			</article>
@@ -114,6 +108,8 @@
                                         <input type="checkbox"/> <label> accès handicapé</label>
                         </div>
                         </article>
+                        <input type="submit" value="Envoyer le formulaire" class="sub"/>
+                    </form>
                     </section>
                     
 		
@@ -123,6 +119,5 @@
 			</article>
 			
                     </section>      
-                    </section>
     </body>
 </html>

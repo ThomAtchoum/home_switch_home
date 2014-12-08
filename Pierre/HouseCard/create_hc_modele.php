@@ -1,8 +1,13 @@
 <?php
+    try
+        {
+            $bdd=new PDO ("mysql:host=localhost;dbname=home_switch_home","root","",array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
+        } 
+    catch (Exception $ex) 
+        {
+            die('Erreur'.$ex->getMessage());
+        }
+?>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<?php
+    
