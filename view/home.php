@@ -3,10 +3,10 @@
 	<link rel="stylesheet" type="text/css" href="../view/style_caroussel.css">
     <ul>
     	<center><font class="testtexte" size=6 color=white>LEURS MAISONS, VOS VACANCES</font></center>
-        <li><img src="http://eurowin-stats.com/media/maison%20BCBG.jpg" width=1000 height=400  /></li>
-    <li><img src="http://eurowin-stats.com/media/maison%20geek%201.jpg" width=1000 height=400 /></li>
-    <li><img src="http://eurowin-stats.com/media/maison%20futuriste.jpg" width=1000 height=400 /></li>
-    <li><img src="http://eurowin-stats.com/media/maison%20bonheur.jpg" width=1000 height=400 /></li>
+        <li><img src="http://eurowin-stats.com/media/maison%20BCBG.jpg" width=1600 height=1000  /></li>
+    <li><img src="http://eurowin-stats.com/media/maison%20geek%201.jpg" width=1600 height=1000 /></li>
+    <li><img src="http://eurowin-stats.com/media/maison%20futuriste.jpg" width=1600 height=1000 /></li>
+    <li><img src="http://eurowin-stats.com/media/maison%20bonheur.jpg" width=1600 height=1000 /></li>
     </ul>
     		<div id="searchbar">
                 	<form action="" class="formulaire">
