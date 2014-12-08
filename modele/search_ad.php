@@ -3,13 +3,21 @@ $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
    
 $req='';
+$reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, house.rating, user.id 
+                                     FROM ad, house, house_area, area, ad_criteria, criteria, user , criteria_house , house_criteria_house 
+                                     WHERE ad.id_house= house.id 
+                                     AND house.id_user=user.id 
+                                     AND house.id=house_area.id_house 
+                                     AND area.id=house_area.id_area 
+                                     AND ad.id=ad_criteria.id_ad 
+                                     AND criteria.id=ad_criteria.id_criteria ';
    
 //creation of the query based on the existence of the criterias    
     
     
      
    //dates
-   
+
     if (isset($_POST['dateBegin']) AND ($_POST['dateBegin']!='')) 
         {
         $dateBegin=$_POST['dateBegin'];
@@ -24,18 +32,13 @@ $req='';
         }
     
     //area
-    
-    function fctArea($area)
-    {
-        global $req;
-                        
-        if (isset($area) AND $area!='') 
+      
+        if (isset($_POST['area']) AND $_POST['area']!='') 
         {
-            $req=$req.' AND area.name= \''.$area.'\'';   
+            $req=$req.' AND area.name= \''.$_POST['area'].'\'';
+           
         }
-    }
-    fctArea($_POST['area']);
-    
+     
     
     //type of house
         
@@ -50,7 +53,7 @@ $req='';
     if (isset($_POST['nbrPeople']) AND $_POST['nbrPeople'] != '') 
         {
         $nbrPeople=$_POST['nbrPeople'];
-        $req=$req.' AND house.nbr_people='.$nbrPeople;   
+        $req=$req.' AND house.nbr_people='.$nbrPeople;
         }
    
     
@@ -63,27 +66,35 @@ $req='';
         }
     
     
-    
+   
     
     //layouts
    
     $ask=$reqBase.$req; 
+    echo $ask;
     
     
         function fctLayout($name)
     {
         global $ask;
-        global $name;
+        
         global $reqBase;
                         
         if (isset($_POST[$name]) AND $_POST[$name] === 'on') 
         {
             $ask=$ask.' AND criteria_house.name=\''.$name.'\' INTERSECT '.$reqBase;
+            
         }
+        else
+        {
+            echo 'caca';
+        }
+ 
     }
     
-    
+    echo $_POST['garden'];
     fctLayout('garden');
+    echo $ask.'<br/><br/>';
     
     fctLayout('cour');
     
@@ -100,6 +111,9 @@ $req='';
     fctLayout('disabledAccess');
     
     $ask=$ask.$reqBase; // on empeche le intersect de tourner dans le vide
+    echo '<br/>'.$ask;
+    
+    //on prend en compte les critères animaux.
     
     if (isset($_POST['allowedAnimals']) AND $_POST['allowedAnimals']==='on')
         {
@@ -121,26 +135,19 @@ $req='';
             {
                 $req=$req.' AND criteria.name=\'allowed_other\'';    
             }
+            $ask= $ask.$req;
         
         }
     elseif(isset($_POST['allowedAnimals']) AND $_POST['allowedAnimals']==='')
     {
-        $req=$req.' AND criteria.name!=\'allowed_animals\'';
+        $ask=$ask.' AND criteria.name!=\'allowed_animals\'';
     }
     
     
-    echo $req.'<br/>';
-    echo $req1;
+    //echo $ask.'<br/>';
     //writing the query adding the result of the previous tests
     
-    $reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, house.rating, user.id 
-                                     FROM ad, house, house_area, area, ad_criteria, criteria, user , criteria_house , house_criteria_house 
-                                     WHERE ad.id_house= house.id 
-                                     AND house.id_user=user.id 
-                                     AND house.id=house_area.id_house 
-                                     AND area.id=house_area.id_area 
-                                     AND ad.id=ad_criteria.id_ad 
-                                     AND criteria.id=ad_criteria.id_criteria ';
+   
     
     
     
