@@ -39,7 +39,7 @@
                         
 		
 			<article class="DescriptionMM"> <!--Mettre ici la description de la maison-->
-                            <p class="txt">
+                            <div class="txt">
                                 <?php
                                             while($resHdesc=$askHdesc->fetch())
                                                 {
@@ -48,7 +48,7 @@
                                 <?php
                                                 }
                                 ?>          
-                            </p>
+                            </div>
 			</article>
                         <article class='Hinformation'>
                         <div class='txt'>
@@ -63,16 +63,65 @@
                                 ?>
                             </p>
                             <div class='otherI'>
-                            <h3>Localisation :</h3>
-                            Region : <br/>
-                            Ville : <br/>
-                            Code postal: <br/>
+                            <h3>Localisation : </h3>
+                            Region : 
+                                <?php 
+                                    while ($resHregion=$askHregion->fetch())
+                                        {
+                                            echo $resHregion['region'];
+                                        }
+                                ?><br/>
+                            Ville : 
+                                <?php
+                                    while ($resHtown=$askHtown>fetch())
+                                        {
+                                            echo $resHtown['town'];
+                                        }
+                                ?><br/>
+                            Code postal: 
+                                <?php
+                                    while ($resHzip=$askHzip->fetch())
+                                        {
+                                            echo $resHzip['zip'];
+                                        }
+                                ?><br/>
+                            Adresse :
+                                <?php
+                                    while ($resHaddress=$askHaddress->fetch())
+                                        {
+                                            echo $resHaddress['address'];
+                                        }
+                                ?>
                             
                             <h3>Informations sur le logement</h3>
-                            Type : <br/>
-                            Capacité : <br/>
-                            Nombre de chambre : <br/>
-                            Aménagements : <br/>
+                            Type : 
+                                <?php 
+                                    while ($resHtype=$askHtype->fetch())
+                                        {
+                                            echo $resHtype['type'];
+                                        }
+                                ?><br/>
+                            Capacité :
+                                <?php 
+                                    while($resHcap=$askHcap->fetch())
+                                        {
+                                            echo $resHcap['capacity'];
+                                        }
+                                ?><br/>
+                            Nombre de chambre : 
+                                <?php
+                                    while($resHnb=$askHnb->fetch())
+                                        {
+                                            echo $resHnb[''];
+                                        }
+                                ?><br/>
+                            Aménagements : 
+                                <?php
+                                    while($resHfac=$askHfac->fetch())
+                                        {
+                                            echo $resHfac['facilities'];
+                                        }
+                                ?>
                             </div>
                         </div>
                         </article>
