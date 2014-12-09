@@ -2,7 +2,7 @@
         
 <?php
 
-$DB = new PDO('mysql:host=127.0.0.1;dbname=test', 'root', '');
+$DB = new PDO('mysql:host=localhost;dbname=home_switch_home', 'root', '');
 
 $pseudo = $_POST["pseudo"];
 $pass = $_POST["pass"];

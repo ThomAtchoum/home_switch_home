@@ -15,8 +15,14 @@
 
                 include("../view/nav.php"); 
 
-                ?>
-            
+                
+            if($_GET['page']=='home' AND isset($_GET['page']))
+                
+                    {
+                        include("../view/home.php");
+                        
+                    } 
+            ?>
             <div class="content">
                 
                 
@@ -25,15 +31,10 @@
 
             <?php        
                 // choice of the page depending on the value in the url
-                if(isset($_GET['page']) and ($_GET['page']!='NULL'))
+                if(isset($_GET['page']) and ($_GET['page']!=''))
                 {
-                    if($_GET['page']=='home')
-                
-                    {
-                        include("../view/home.php");
-                        
-                    }   
-                    elseif( $_GET['page']=='research')
+                      
+                    if( $_GET['page']=='research')
                     {
                         include("../view/search_box.php");//vue
                     }
@@ -77,8 +78,18 @@
                         include("../view/topic.php");//vue
                         include("../modele/search_topic.php"); //modele
                     }
+                    elseif( $_GET['page']=='formUser')
+                    {
+                        include("../view/form_user.php");//vue
+                    }
+                    elseif( $_GET['page']=='confirmAddUser')
+                    {
+                        //include("../view/confirm_add_user.php");//vue
+                        require("../modele/add_user.php"); //modele
+                    }
                     
                 }
+                
                    
                 ?>
                 
