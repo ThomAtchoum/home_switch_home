@@ -46,13 +46,13 @@ if (isset($page) AND $page!='')
                     {
                         
                     }
-                    elseif( $_GET['page']=='formUser')
+                    elseif( $_GET['page']=='newMsg')
                     {
-                       
+                       echo'<link rel="stylesheet" href="../view/css/mailbox_style.css">';
                     }
-                    elseif( $_GET['page']=='confirmAddUser')
+                    elseif( $_GET['page']=='confirmAddMsg')
                     {
-                       
+                       echo'<link rel="stylesheet" href="../view/css/mailbox_style.css">';
                     }
                     
     }

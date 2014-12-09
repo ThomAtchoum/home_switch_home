@@ -88,6 +88,16 @@
                         require("../modele/add_user.php"); //modele
                         include("../view/confirm_add_user.php");//vue
                     }
+                    elseif( $_GET['page']=='newMsg')
+                    {
+                        include("../view/new_message.php");//vue
+                    }
+                    elseif( $_GET['page']=='confirmAddMsg')
+                    {
+                        
+                        require("../modele/add_message.php"); //modele
+                        include("../view/confirm_add_message.php");//vue
+                    }
                     
                 }
                 
