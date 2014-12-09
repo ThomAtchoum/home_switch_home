@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html> 
-	<head>
-		<meta charset="utlf-8"/>
-		<link rel="stylesheet" href="view/css/mailbox_style.css" />
+
 		<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script> <!-- nice edit -->
 		<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
-        </head>
-	<body>
+<?php
+include ('mailbox_toolbar.php');
+?>
 			<section class="newmsg"> 
 			<div class="navnewmgs">
 				<ul class="listehz">
