@@ -1,6 +1,5 @@
-<html>
-    <body>
-        <meta charset="utf-8" />
+
+        
 <?php
 
 $DB = new PDO('mysql:host=localhost;dbname=home_switch_home', 'root', '');
@@ -15,7 +14,6 @@ $req->execute(array(
     'pass' => $pass,
     'mail' => $mail,
    ));
-echo 'Le login, le mot de passe et le mail ont bien étés ajoutés !';
+
 ?>
-    </body>
-</html>
+    
