@@ -2,7 +2,7 @@
 <html> 
 	<head>
 		<meta charset="utlf-8"/>
-		<link rel="stylesheet" href="mailbox_style.css" />
+		<link rel="stylesheet" href="view/css/mailbox_style.css" />
 		<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script> <!-- nice edit -->
 		<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
         </head>
@@ -19,7 +19,7 @@
 			</div>
 		
 			<div class="newmsgform" >
-				<form method=post action="add_message.php" class="form-horizontal">
+				<form method=post action="modele/add_message.php" class="form-horizontal">
 					<p>
 						<label> à:</label>
 						<input type="text" name="id_receiver"/>
