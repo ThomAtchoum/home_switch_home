@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="mailbox_style.css" />
 		<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script> <!-- nice edit -->
 		<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+        </head>
 	<body>
 			<section class="newmsg"> 
 			<div class="navnewmgs">
