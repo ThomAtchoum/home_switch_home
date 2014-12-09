@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-
 		<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script> <!-- nice edit -->
 		<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 <?php
 include ('mailbox_toolbar.php');
 ?>
-			<section class="newmsg"> 
+		<section class="newmsg"> 
 			<div class="navnewmgs">
 				<ul class="listehz">
 					<li><input class="button" type ="submit" value="Envoyer"/></li>
@@ -42,7 +40,6 @@ include ('mailbox_toolbar.php');
 				</form>
 			</div>
 		</section>
-	</body>
-</html>
+
 
 
