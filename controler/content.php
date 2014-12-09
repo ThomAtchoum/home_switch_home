@@ -2,8 +2,8 @@
 
 <html>
     <head>
-        
-            <?php include_once("../view/index.php"); ?>
+            <meta charset="utf-8"/>
+            <?php include("secondary_controler.php"); ?>
        
     </head>
 	<body>
