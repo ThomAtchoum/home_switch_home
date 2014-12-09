@@ -155,11 +155,6 @@ $reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, ho
     } catch (PDOException $e){
         $e->getMessage();
     }
-    while($resResult = $askResearch->fetch())
-    {
-            echo $resResult['title']."<br/>";
-    
-    }
     
     
 

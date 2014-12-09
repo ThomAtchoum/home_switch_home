@@ -10,30 +10,36 @@
     position:relative;
     height:1000px;
     width:100%;
-    float:left;
-    
-    
     overflow:hidden;
+    
 }
 #carrousel ul {
 
 	list-style: none;
 	position: relative;
+        
 }
 #carrousel ul li{
     position:absolute;
     top:0;
     left:0;
+    margin-left:auto;
+    margin-right:auto;
 }
-
-.testtexte {
+center
+{
+    height:25px;
+    top: 275px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.texte {
 	text-align: center;
 	font-family: helvetica;
 	z-index: 10;
 	position: absolute;
-	top: 275px;
-	left: 250px;
-	display:inline-block;
+	
+	        
 }
 #searchbar{
 	border-radius: 0 6px 6px 0; 
@@ -57,7 +63,7 @@
 }
 .formulaire .bouton{
 	background-repeat: no-repeat;
-	font-style: bold;
+	font-style: bold ;
 	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
 	background-color: white;
 	font-family: helvetica;
@@ -66,4 +72,10 @@
 	border-radius: 8px;
 	padding: 0; 
 }
+.img
+{
+    margin-right:auto;
+    margin-left:auto;
+}
+
 
