@@ -11,7 +11,7 @@ while($resData=$askResearch->fetch())
         <?php echo $resData['title']; ?>
     </p>
     <p class="dates">
-        <?php echo $resData['date_begin'] + "/" + $resData['length'] ; ?>
+        <?php echo $resData['date_begin']." and the length is".$resData['length'] ; ?>
     </p>
     <p class="description"> 
         <?php echo $resData['description']; ?>
@@ -22,7 +22,8 @@ while($resData=$askResearch->fetch())
     <p class="rating">
         <?php echo $resData['rating'] ?>
 </p>
+    <?php
 $research->closeCursor();
-<?php
+
 }
 

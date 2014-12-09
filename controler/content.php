@@ -84,8 +84,9 @@
                     }
                     elseif( $_GET['page']=='confirmAddUser')
                     {
-                        //include("../view/confirm_add_user.php");//vue
+                        
                         require("../modele/add_user.php"); //modele
+                        include("../view/confirm_add_user.php");//vue
                     }
                     
                 }
