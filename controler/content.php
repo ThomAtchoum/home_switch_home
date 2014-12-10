@@ -43,10 +43,11 @@
                         require("../modele/search_ad.php"); //modele
                         include("../view/search_result.php"); //vue
                     }
-                    elseif( $_GET['page']=='my_profile')
+                    elseif( $_GET['page']=='myProfile')
                     {
-                        include("../view/my_profile.php");//vue
                         include("../modele/search_my_profile.php"); //modele
+                        require("../view/my_profile.php");//vue
+                        
                     }
                     elseif( $_GET['page']== 'my_research')
                     {
