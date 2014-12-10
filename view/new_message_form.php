@@ -6,7 +6,6 @@ include ('mailbox_toolbar.php');
 		<section class="newmsg"> 
 			<div class="navnewmgs">
 				<ul class="listehz">
-					<li><input class="button" type ="submit" value="Envoyer"/></li>
 					<li><input type ="button" value="Enregister comme brouillon"/></li>
 					<li><input type ="submit" value="Annuler"/></li>
 					<li><input type ="reset" value="Supprimer"/></li>
@@ -37,6 +36,7 @@ include ('mailbox_toolbar.php');
                                                 <?echo .date("Y/m/d");?>    
                                                 </textarea>
 					</p>
+                                        <p><input class="button" type ="submit" value="Envoyer"/></p>
 				</form>
 			</div>
 		</section>
