@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css encart.css" />
 		<title> Encart connexion </title>
-	<head>
+	</head>
 	
 	<body>
 			<aside class="button"> 
-				<p>
+				<div>
 					<form class="co"> <!--Bouton connexion-->
 						<input type="button" name="connexion" value="Connexion" onclick="self.location.href='test n3bis.html'" style="width:130px" />
 					</form>
@@ -16,28 +16,27 @@
 					<form class="insc"> <!--Bouton inscription-->
 						<input type="button" name="inscription" value="Inscription" onclick="self.location.href='page2.html'" style="width:130px" />
 					</form>
-				</p>
+				</div>
 			</aside>
 			
 			<br />
 			
 			<aside class="champ"> <!--Champs de connexion-->
-				<p class="SeCo"> Se connecter </p>
-				<p>
-					<form method="post" action=".php"class="txtid">
-						<input type="texte" name="Identifiant" id="identifiant" maxlength="30" size="17px" placeholder="Identifiant"/> <!-- Champ identifiant de 30 caractères maxi-->
+				<div class="SeCo"> Se connecter </div>
+				<div>
+					<form method="post" action=".php" class="txtid">
+						<input type="text" name="Identifiant" id="identifiant" maxlength="30" size="17" placeholder="Identifiant"/> <!-- Champ identifiant de 30 caractères maxi-->
 					</form>
 					<form method="post" action=".php" class="txtmdp">
-						<input type="password" name="password" id="password" maxlength="30" size="17px" placeholder="Mot de passe"/> <!-- Champ mdp de 30 caractères maxi-->
+						<input type="password" name="password" id="password" maxlength="30" size="17" placeholder="Mot de passe"/> <!-- Champ mdp de 30 caractères maxi-->
 					</form>
-				</p>
-				<p>
+				</div>
+				<div>
 					<form class="GoConnex"> <!--Bouton envoi formulaire connexion-->
 						<input type="button" name="GoConnex" value="Connexion" onclick="self.location.href='page2.html'" style="width:130px" />
 					</form>	
-				<p>
+				</div>
 				<a href="MDPoublie.html" class="mdpo"> Mot de passe oublié </a>
-				</p>
 			</aside>
 	</body>
 </html>
