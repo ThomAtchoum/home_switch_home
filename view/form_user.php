@@ -1,20 +1,9 @@
-<html>
-	<header>
-		<title>Formulaire d'inscription</title>
-	</header>
-	
-	<body>
-	  	
-		<link rel="stylesheet" type="text/css" href="formulaireinscription.css" />
+
 		
-	<div id="formulaire" style="background-color: rgba(255, 255, 255, 0.7)">
-		<meta charset="utf-8" />
-		<h1>Formulaire d'inscription</h1>
+		
+	
 
-		<fieldset>
-		<legend>Vos coordonnées</legend>
-
-		<form method="post" action="add_user.php">
+		<form method="post" action="content.php?page=confirmAddUser">
 			<p>
 				<label>Nom</label> : <input type="text" name="nom" id="Nom" placeholder="Ex:Hasselhof" />
 			</p>
@@ -52,7 +41,7 @@
 
 	<script src="formulaireinscription.js"></script>
 
-        <form method="post" action="comparaisonpass.php">
+       
 			<p>
 				<label for="pass">Mot de passe*</label>
 				<input type="password" name="pass" id="pass" />
@@ -65,7 +54,7 @@
 				<input type="password" name="repass" id="repass" />
 			</p>
 		
-        </form>	
+        
 		
 		
 			<p>
@@ -90,8 +79,3 @@
 		
 			<input type="reset" name="annuler" value="Annuler" />
 		</form>
-		</body>
-		
-
-
-</html>
