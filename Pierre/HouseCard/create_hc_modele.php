@@ -10,8 +10,6 @@
 ?>
 
 <?php
-    if (isset($_POST['Region']) AND $_POST['Region']!="")
-        {
-            $insRegion=$bdd->prepare('INSERT INTO house(region)');
-        }
-    
+    $insh=$bdd->prepare("INSERT INTO house('title,description,town,address,zipcode,type,id_area') VALUES(:title,:desc,:town,:address,:zip,:type,:area)");
+        $insh->execute(array('title'=>$_POST['title'],'desc'=>$_POST['description'],'town'=>$_POST['town'],'address'=>$_POST['address'],'zip'=>$_POST['zipcode'],'type'=>$_POST['type'],'area'=>$_POST['area']));
+?>
