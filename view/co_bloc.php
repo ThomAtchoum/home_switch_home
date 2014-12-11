@@ -5,7 +5,7 @@
                     }
                     ;
            
-                if(isset($_SESSION['login']))
+                if(isset($_SESSION['userLogin']))
                     {
                         $blocConnexion=3;
                     }
