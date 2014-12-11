@@ -5,7 +5,7 @@ include "../modele/search_co_bloc.php"
 if(isset($_POST) AND $_POST['login']!="" AND $_POST['password']!="")
     {
         extract($_POST);
-        while($resPass=$askPass->fetch() AND $resId=$askId->fetch())
+        while($resPass=$askPass->fetch())
             {
                         if($_POST['password']!=$resPass['password']) 
                             {
@@ -17,8 +17,8 @@ if(isset($_POST) AND $_POST['login']!="" AND $_POST['password']!="")
                             }
                         else 
                             {
-                                $_SESSION['login'] = $login;
-                                $_SESSION['id']=$resId;
+                                $_SESSION['login'] =$login;
+                              
                             }
                     
             }
