@@ -1,6 +1,6 @@
 <aside class="button"> 
     <div>
-            <form method='post' action='co_bloc.php' class="co"> <!--Bouton connexion-->
+            <form method='post' action='../view/co_bloc.php' class="co"> <!--Bouton connexion-->
                 <input type="hidden" name="blocConnexion" value="2" />
                 <input type="submit" value="Connexion" style="width:130px" />
             </form>
