@@ -1,1 +1,1 @@
-encart 3 $session(login)=<?php$_SESSION['login']?> $session(id)=<?php$_SESSION['id']?>
+encart 3 $session(login)=<?phpecho $_SESSION['login']?> $session(id)=<?phpecho$_SESSION['id']?>
