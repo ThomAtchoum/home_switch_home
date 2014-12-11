@@ -27,15 +27,15 @@
                     {
                         default:
                         case 1:
-			include "../view/co_bloc/encart_case1.php";
+			include "../view/co_bloc/co_bloc_1.php";
                         break;
                     
                         case 2:
-                        include "../view/co_bloc/encart_case2.php";
+                        include "../view/co_bloc/co_bloc_2.php";
                         break;
                     
                         case 3:
-                        include "../view/co_bloc/encart_case3.php";
+                        include "../view/co_bloc/co_bloc_3.php";
                         echo $_SESSION['login'];
 			break;			
                     }
