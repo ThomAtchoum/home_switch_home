@@ -3,7 +3,7 @@ include('mailbox_toolbar.php');
 ?>
 
 <?php
-require("../model/search_messages.php");
+require("../model/search_my_mp.php");
 ?>
 
 <table>
