@@ -14,28 +14,22 @@ include ('mailbox_toolbar.php');
 			</div>
 		
 			<div class="newmsgform" >
-				<form method=post action="../modele/add_message.php" class="form-horizontal">
+                            <form method=post action="../modele/add_message.php" class="form-horizontal">
 					<p>
 						<label> à:</label>
-						<input type="text" name="id_receiver"/>
+						<input class= "champ" type="text" name="id_receiver"/>
 							
 					
 					</p>
 					<p>
 						<label> titre: </label>
-						<input type="text" name="title"/>
+						<input class= "champ" type="text" name="title"/>
 					</p>
 					
 						<label> Message: </label>
 						<textarea name="text"></textarea>
 					</p>
-                                        </p>
 					
-						<label> date: </label>
-                                                <textarea name="date">
-                                                <?echo .date("Y/m/d");?>    
-                                                </textarea>
-					</p>
                                         <p><input class="button" type ="submit" value="Envoyer"/></p>
 				</form>
 			</div>
