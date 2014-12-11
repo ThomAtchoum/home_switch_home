@@ -6,7 +6,7 @@ include('mailbox_toolbar.php');
 require("../model/search_my_mp.php");
 ?>
 
-<table>
+<p><table>
     <tr>
         <td>Auteur</td>
         <td>Titre</td>
@@ -20,7 +20,7 @@ require("../model/search_my_mp.php");
         <td><a href="content.php?page=readMsg"><?php echo $resData['title'];?></a> </td>
         <td> <?php echo $resData['date'];?> </td>
     </tr>
-
+</p>
 <?php
 }
 ?>

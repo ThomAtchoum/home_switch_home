@@ -1,10 +1,10 @@
 <?php
 include ('mailbox_toolbar.php');
 ?>
-
+<html>
 <ul class="listehz">
 					<li><input type ="button" value="nouveau"/></li>
-					<li><input type ="submit" value="répondre"/></li>
+					<li><input type ="button" value="répondre"/></li>
 					<li><input type ="reset" value="supprimer"/></li>
 				</ul>
 <p>titre</p>
@@ -13,9 +13,5 @@ include ('mailbox_toolbar.php');
 <p>adresse mail des receveurs</p>
 <p>date d'envoi</p>
 <p>texte du message</p>
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+</html>
