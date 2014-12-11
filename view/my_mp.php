@@ -3,7 +3,7 @@ include('mailbox_toolbar.php');
 ?>
 
 <?php
-require("../model/search_my_mp.php");
+require("../modele/search_my_mp.php");
 ?>
 
 <p><table>
@@ -12,7 +12,8 @@ require("../model/search_my_mp.php");
         <td>Titre</td>
         <td>Date de récéption</td>
     </tr>
-<?php while ($resData = $askResearch->fetch()) 
+<?php
+while ($resData = $user_message->fetch()) 
 {
 ?>
     <tr>
