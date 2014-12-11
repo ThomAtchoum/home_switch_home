@@ -1,5 +1,5 @@
 <?php
-include "../modele/search_bloc_co_2.php"
+include "../modele/search_co_bloc.php"
 ?>
 <?php
 if(isset($_POST) AND $_POST['login']!="" AND $_POST['password']!="")
