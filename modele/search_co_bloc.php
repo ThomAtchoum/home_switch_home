@@ -11,7 +11,4 @@
 <?php
     $askPass=$bdd->prepare("SELECT password FROM user WHERE login=:login");
         $askPass->execute(array('login'=>$_POST['login']));
-    
-    $askId=$bdd->prepare("SELECT id FROM user WHERE login=:login");
-        $askId->execute(array('login'=>$_POST['login']));
 ?>

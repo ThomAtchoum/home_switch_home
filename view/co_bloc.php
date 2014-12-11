@@ -36,7 +36,7 @@
                     
                         case 3:
                         include "../view/co_bloc/co_bloc_3.php";
-                        echo $_SESSION['login'];
+                        echo $_SESSION['userLogin'];
 			break;			
                     }
                    

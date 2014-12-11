@@ -17,8 +17,11 @@ if(isset($_POST) AND $_POST['login']!="" AND $_POST['password']!="")
                             }
                         else 
                             {
-                                $_SESSION['login'] =$login;
-                              
+                                $_SESSION['userlogin'] =$login;
+                                /*while($resId=$askId->fetch())
+                                {
+                                $_SESSION['userId']=$resId;
+                                }*/
                             }
                     
             }
