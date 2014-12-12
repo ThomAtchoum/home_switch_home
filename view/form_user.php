@@ -1,9 +1,26 @@
-
+<script language="JavaScript">
+    function validation(f) {
+  if (f.pass.value == '' || f.repass.value == ''|| f.mail.value == ''|| f.pseudo.value == '') {
+    alert('Tous les champs obligatoires ne sont pas remplis');
+    f.pass.focus();
+    return false;
+    }
+  else if (f.pass.value != f.repass.value) {
+    alert('Ce ne sont pas les mêmes mots de passe!');
+    f.pass.focus();
+    return false;
+    }
+  else if (f.pass.value == f.repass.value) {
+    return true;
+    }
+  else {
+    f.pass.focus();
+    return false;
+    }
+  }
+</script>
 		
-		
-	
-
-		<form method="post" action="content.php?page=confirmAddUser">
+		<form method="post" action="content.php?page=confirmAddUser" onsubmit="return validation(this)">
 			<p>
 				<label>Nom</label> : <input type="text" name="nom" id="Nom" placeholder="Ex:Hasselhof" />
 			</p>
@@ -79,3 +96,4 @@
 		
 			<input type="reset" name="annuler" value="Annuler" />
 		</form>
+ 

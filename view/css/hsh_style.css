@@ -2,6 +2,7 @@
 {
         padding: 0;
         margin: 0;
+        font-family: Helvetica;
         
 }
 
@@ -27,7 +28,7 @@ body
     
     margin-left:auto;
     margin-right:auto;
-    margin-bottom: 100px;
+    margin-bottom: 400px;
     height:1000px;
     background-size:100%;
     //background-image: url("pictures/logo.png");
@@ -48,15 +49,19 @@ body
 
 header
 {
-	width: 100%;
+	width: 98%;
         height: 70px;
-	background-color:#00aadd;
+	background-color:#00BCE0;
 	text-align:center;
+        margin-left:auto;
+        margin-right:auto;
         min-width:1280px;
         display:block;
         color:#fafafa;
+        border-radius:17px 17px 0 0;
+        margin-top:1%;
         
-        font-family:"Lobster";
+        
 }
 
 footer
@@ -76,14 +81,18 @@ footer
 
 nav
 {
-	width: 100%;
+	width: 98%;
         height: 28px;   
-        float:left;
-        z-index:3;
         
+        z-index:1000;
+        margin-left:auto;
+        margin-right:auto;       
         margin-bottom: 1px; 
         min-width:1280px;
         border-bottom:solid 1px;
+        border-radius:0 0 17px 17px;
+        overflow: visible;
+        
         
 }
 
@@ -108,6 +117,7 @@ nav
     height:10%;
     min-height:110px;
     margin-left:2px;
+    bottom:0px;
     
 }
 .titre_colonne_1 , .titre_colonne_2 , .titre_colonne_3
@@ -156,8 +166,8 @@ a.linkBlock:link, a.linkBlock:visited
     display: block;
     min-width: 140px;
     font-weight: bold;
-    color: #000000;
-    background-color:#f1f1f1;
+    color: #ffffff;
+    background-color:#00BCE0;
     text-align: center;
     padding: 4px;
     text-decoration: none;
@@ -170,27 +180,32 @@ a.subMenuLinkBlock:link, a.subMenuLinkBlock:visited
     display: block;
     width: auto;
     color: #000000;
-    background-color:#ffffff;
+    background-color:#00BCE0;
     text-align: center;
     padding: 4px;
     text-decoration: none;
+    color:white;
+    z-index:1000;
 }
 
 a.linkBlock:hover
 {
-  background-color:#ffffff;  
+  background-color:#00BCE0; 
 }
 
 a.linkBlock:hover,a.subMenuLinkBlock:hover
 {
-    border:solid 1px black;
+    border:solid 1px;
+    border-color:#ffffff;
+    z-index:1000;
 }
 
 a.linkBlock:active,
 a.subMenuLinkBlock:hover, a.subMenuLinkBlock:active 
 {
 	/* Changement de couleur pour indiquer le bloc qui nous intéresse */
-    background-color:#ffffff;
+    background-color:#00BCE0;
+    z-index:1000;
         
 }
 
@@ -201,6 +216,7 @@ ul.linkBlockList ul.subMenuBlockList
     list-style-type: none;
     margin: 0;
     padding: 0;
+   
     
     
 }
@@ -215,4 +231,5 @@ li.subMenuDisplayer:hover ul.subMenuBlockList
 li.subMenuBlockList
 {
     width:100%;
+    z-index:1000;
 }
