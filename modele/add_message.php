@@ -14,7 +14,7 @@ session_start();
     $req = $DB -> prepare ('INSERT INTO messages(date, id_author, id_receiver, title, text) VALUES ( :date, :id_author, :id_receiver, :title, :text) ');
     $req->execute (array(
         'date'=>(new DateTime("now"))->format('Y-m-d H:i:s'),
-        'id_author' =>/* $_SESSION['userId'] */1,
+        'id_author' =>$_SESSION['userId'],
         'id_receiver'=>$id_receiver,
         'title'=>$title,
         'text'=>$text,
