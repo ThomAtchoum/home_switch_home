@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <html>
     <head>
         <title>Mon Profil</title>
@@ -16,7 +19,15 @@ while ($donnees = $req->fetch())
 <?php
 $req->closeCursor();
 ?>
-        <link rel="stylesheet" href="../RatingSystem/css_rating_system.css" />
+<?php
+if(isset($_SESSION)AND $_SESSION['login']==$donnees['login'])
+{
+    echo $donnees['rating'];
+}
+ else 
+{
+     ?>
+     <link rel="stylesheet" href="../RatingSystem/css_rating_system.css" />
         <form method="get" action="../RatingSystem/cible.php">
             <div class="rating">
                 <fieldset class="rating">
@@ -33,6 +44,9 @@ $req->closeCursor();
                     <input type="radio" id="RH1" name="ratingH" value="1" class="rating-input"/><label for="RH1" title="1/10" class="rating-star"></label>
                 </fieldset>
             </div>
+}
+
+        
             <br/><input type="submit" value="Noter" />
         </form>
         <div>
@@ -43,4 +57,5 @@ $req->closeCursor();
 		</div>
     </body>
 </html>
+
     
