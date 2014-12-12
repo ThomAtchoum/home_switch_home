@@ -32,13 +32,13 @@
 		
 		
 			<p>
-				<label>Date de naissance</label> : <input type="date" name="date" id="Date de Naissance" placeholder="JJ/MM/AAAA" />
+				<label>Date de naissance</label> : <input type="date" name="date" id="DatedeNaissance" placeholder="JJ/MM/AAAA" />
 			</p>
 		
 
 		
 			<p>
-				<label>Adresse e-mail*</label> : <input type="email" name="mail" id="Adresse e-mail" placeholder="Ex:dhasselhof@malibu.com" />
+				<label>Adresse e-mail*</label> : <input type="email" name="mail" id="Adressemail" placeholder="Ex:dhasselhof@malibu.com" />
 			</p>
 		
 
