@@ -91,7 +91,7 @@
                     }
                     elseif( $_GET['page']=='newMsg')
                     {
-                        include("../view/new_message.php");//vue
+                        include("../view/new_message_form.php");//vue
                     }
                     elseif( $_GET['page']=='confirmAddMsg')
                     {
