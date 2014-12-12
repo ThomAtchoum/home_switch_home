@@ -8,9 +8,9 @@
     
     <body>
                 <section class="RightCol">
-                    <form action="" method="post" id="create_house" enctype="multipart/form-data">
+                    <form action="create_hc_modele.php" method="post" id="create_house" enctype="multipart/form-data" onSubmit="">
                         <article class='title'> <!--Insert the title-->
-                            <input type="text" name="title" placeholder="titre de la maison" />
+                            <input type="text" name="title" placeholder="titre de la maison" onblur="verifform(this)"/>
                         </article>
 			<article class="PhotosButtons"> <!--Insert the photos-->
 				<aside class="PhotosMM"> 
@@ -23,15 +23,15 @@
 		
 			<article class="DescriptionMM"> <!--Mettre ici la description de la maison-->
                             <p class="txt">
-                                <textarea placeholder="Description de votre bien"></textarea>
+                                <textarea name="description" placeholder="Description de votre bien"></textarea>
                             </p>
 			</article>
                         <article class='Hinformation'>
                         <div class='txt'>
                             <h3>Localisation :</h3>
                                 <!--Region-->
-                                <label for="Region">Région :</label>
-                                <select name="Region" id="Region"> <!--champ de régions du bon coin muhahaha -->
+                                <label for="region">Région :</label>
+                                <select name="region" id="region"> <!--champ de régions du bon coin muhahaha -->
                                         <option value="01" >Alsace</option>
                                         <option value="02" >Aquitaine</option>
                                         <option value="03" >Auvergne</option>
@@ -61,21 +61,21 @@
                                  </select><br/>
                                 
                                 <!--Town-->
-                                <label for="Town"> Ville : </label>
+                                <label for="town"> Ville : </label>
                                 <input type="text" name="town" id="town"/><br/>
                                 
                                 <!--ZipCode-->
-                                <label for='ZipCode'>Code Postal :</label>
-                                <input type='number' name='ZipCode' id='ZipCode' /><br/>
+                                <label for='zipcode'>Code Postal :</label>
+                                <input type='number' name='zipcode' id='zipcode' /><br/>
                                 
                                 <!--address-->
-                                <label for='Address'> Adresse :</label>
-                                <input type='text' name='Address' id='Address'/>
+                                <label for='address'> Adresse :</label>
+                                <input type='text' name='address' id='address'/>
                             
                             <h3>Informations sur le logement</h3>
                                 <!--Type-->
                                 <label> Type de logement :</label>
-                                <select id="house_type" name="house_type"> <!-- champs des types de logements simplifiées: partenaires-europréens.fr-->
+                                <select id="type" name="house_type"> <!-- champs des types de logements simplifiées: partenaires-europréens.fr-->
                                         <option value="00">Choisissez votre type de logement</option>
                                         <option value="01" title="Maison">Maison / Villa</option>
                                         <option value="02" title="Appartement">Appartement</option>
@@ -91,21 +91,21 @@
                                 
                                 <!--Capacity-->
                                 <label>Capacité :</label>
-                                <input type="number" name="Capacity" id="Capacity" />
+                                <input type="number" name="capacity" id="capacity" />
                                 <br/>
                                 
                                 <!--BRnb-->
                                 <label>Nombre de chambre :</label>
-                                <input type="number" name="BRnb" id="BRnb" />
+                                <input type="number" name="brnb" id="brnb" />
                                 <br/>
                                 
                                 <!--Facilities-->
                                 <label>Aménagements :</label>
                                     <input type="checkbox"/> <label> cour </label>
-                                        <input type="checkbox"/> <label> jardin</label>
-                                        <input type="checkbox"/> <label> garage/ parking</label>
-                                        <input type="checkbox"/> <label> piscine </label>
-                                        <input type="checkbox"/> <label> accès handicapé</label>
+                                        <input type="checkbox" value="garden"/> <label> jardin</label>
+                                        <input type="checkbox" value="parking"/> <label> garage/ parking</label>
+                                        <input type="checkbox" value="pool"/> <label> piscine </label>
+                                        <input type="checkbox" value="disabled"/> <label> accès handicapé</label>
                         </div>
                         </article>
                         <input type="submit" value="Envoyer le formulaire" class="sub"/>
@@ -118,6 +118,7 @@
 			<?php   include '../ProfileReminder/profile_reminder_controleur.php'; ?>
 			</article>
 			
-                    </section>      
+                    </section>
+        <?php include"verf_H_form.php" ?>
     </body>
 </html>

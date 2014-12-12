@@ -9,6 +9,11 @@
         }
 ?>
 <?php
-    $askPass=$bdd->prepare('SELECT pasword FROM user WHERE login=:login');
-        $askPass->execute(array('login'=>$_POST['login']));
+    $askLogin=$bdd->prepare('SELECT COUNT(*) FROM `user` WHERE login=:login');
+        $askLogin->execute(array('login'=>$_GET['login']));
 ?>
+<?php
+while ($resLogin=$askLogin->fetch())
+{
+echo $askLogin;
+}

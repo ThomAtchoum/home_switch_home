@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!Doctype html>
 
 <html>
@@ -13,7 +14,9 @@
             <?php 
              include("../view/header.php"); 
 
-                include("../view/nav.php"); 
+                include("../view/nav.php");
+                
+                    include("../view/co_bloc.php");
 
                 
             if($_GET['page']=='home' AND isset($_GET['page']))
