@@ -40,35 +40,33 @@
                         /*$askrate->closeCursor()*/
                     ?>
         <?php   }
-            else
+            elseif(isset($_SESSION['userId']))
                 {
-                    $idowner=$_SESSION['id'];
+                    $idOwner=$_SESSION['userId'];
         ?>
-        <?php
-                        $askNP = $bdd->prepare('SELECT U.login FROM user U WHERE U.id = :id');
-                                $askNP->execute(array('id'=>$idowner));
-                        /*$askNP->closeCursor();*/
+                    <?php
+                        $askNP=$bdd->prepare('SELECT login FROM user WHERE id=:iduser');
+                            $askNP->execute(array('iduser'=>$idOwner));
                     ?>
 
                     <?php   /*Récupération de la description*/
-                        $askDesc = $bdd->prepare('SELECT U.description FROM user U WHERE U.id = :id');
-                             $askNP->execute(array('id'=>$idowner));
+                        $askDesc = $bdd->prepare('SELECT description FROM user WHERE id = :id');
+                             $askNP->execute(array('id'=>$idOwner));
                        /*$askdesc->closeCursor()*/
                     ?>
 
                     <?php   /*Récupération photo de profil*/
-                        $askPic = $bdd->prepare('SELECT U.picture FROM user U WHERE U.id = :id');
-                                $askNP->execute(array('id'=>$idowner));
+                        $askPic = $bdd->prepare('SELECT picture FROM user WHERE id = :id');
+                                $askNP->execute(array('id'=>$idOwner));
                         /*$askpic->closeCursor()*/
                     ?>
 
                     <?php
-                        $askRate = $bdd->prepare('SELECT U.rating FROM user U WHERE U.id = :id');
-                                $askNP->execute(array('id'=>$idowner));
+                        $askRate = $bdd->prepare('SELECT rating FROM user WHERE id = :id');
+                                $askNP->execute(array('id'=>$idOwner));
                         /*$askrate->closeCursor()*/
                     ?>
-            }
-        
-        
+        <?php
+                }
+        ?>
     </body>
-
