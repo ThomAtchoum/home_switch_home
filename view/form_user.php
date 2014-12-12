@@ -54,11 +54,7 @@
 				<label for="pseudo">Pseudo*</label>
 				<input type="text" name="pseudo" id="pseudo" placeholder="Ex:Chabadou" maxlenght="12" />
 			</p>
-		
-
-	<script src="formulaireinscription.js"></script>
-
-       
+                        
 			<p>
 				<label for="pass">Mot de passe*</label>
 				<input type="password" name="pass" id="pass" />
