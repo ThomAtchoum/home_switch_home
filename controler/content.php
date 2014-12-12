@@ -48,8 +48,8 @@
                     }
                     elseif( $_GET['page']=='myProfile')
                     {
-                        include("../modele/search_my_profile.php"); //modele
-                        require("../view/my_profile.php");//vue
+                        require("../modele/search_my_profile.php"); //modele
+                        include("../view/my_profile.php");//vue
                         
                     }
                     elseif( $_GET['page']== 'my_research')
@@ -92,16 +92,51 @@
                         require("../modele/add_user.php"); //modele
                         include("../view/confirm_add_user.php");//vue
                     }
+                    elseif( $_GET['page']=='formUser')
+                    {
+                        include("../view/form_user.php");//vue
+                    }
+                    elseif( $_GET['page']=='confirmAddUser')
+                    {
+                        
+                        require("../modele/add_user.php"); //modele
+                        include("../view/confirm_add_user.php");//vue
+                    }
+                    
+                    // Add a house
+                    
+                    elseif( $_GET['page']=='formHouse')
+                    {
+                        include("../view/form_house.php");//vue
+                    }
+                    
+                    // Confirm the add of the house
+                    
+                    elseif( $_GET['page']=='confirmAddHouse')
+                    {
+                        
+                        require("../modele/add_house.php"); //modele
+                        include("../view/confirm_add_house.php");//vue
+                    }
+                    
+                    // Write a new msg
+                    
                     elseif( $_GET['page']=='newMsg')
                     {
                         include("../view/new_message_form.php");//vue
                     }
+                    
+                    //confirm the sending of the new message
+                    
                     elseif( $_GET['page']=='confirmAddMsg')
                     {
                         
                         require("../modele/add_message.php"); //modele
                         include("../view/confirm_add_message.php");//vue
                     }
+                    
+                                    
+                   
                     elseif($_GET['page']=='createHouse')
                     {
                         //require("../modele/add_house.php"); //modele

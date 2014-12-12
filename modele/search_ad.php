@@ -3,7 +3,7 @@ $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
    
 $req='';
-$reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, house.rating, user.id 
+$reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.description ,house.pictures, house.rating, user.id 
                                      FROM ad, house, house_area, area, ad_criteria, criteria, user , criteria_house , house_criteria_house 
                                      WHERE ad.id_house= house.id 
                                      AND house.id_user=user.id 
@@ -93,7 +93,7 @@ $reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, ho
     
     
     fctLayout('garden');
-    echo $ask.'<br/><br/>';
+    
     
     fctLayout('cour');
     
@@ -143,7 +143,7 @@ $reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, ho
     }
     
     $askFinal=$reqBase.$req.$ask;
-    echo $askFinal;
+    
     
     //writing the query adding the result of the previous tests
     
@@ -160,17 +160,7 @@ $reqBase='SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, ho
     }
     
     //test d'algorythme de recherche
-$viewSearch=$DB->prepare('CREATE VIEW viewSqlResearch AS SELECT DISTINCT ad.title, ad.date_begin, ad.length, house.pictures, house.rating, user.id 
-                                     FROM ad, house, house_area, area, ad_criteria, criteria, user , criteria_house , house_criteria_house 
-                                     WHERE ad.id_house= house.id 
-                                     AND house.id_user=user.id 
-                                     AND house.id=house_area.id_house 
-                                     AND area.id=house_area.id_area 
-                                     AND ad.id=ad_criteria.id_ad 
-                                     AND criteria.id=ad_criteria.id_criteria
-                                     AND criteria_house.id=house_criteria_house.id_criteria_house
-                                     AND house.id=house_criteria_house.id_house'.$req.$ask);
-    $viewSearch->execute;
+
     
     while($resData=$askResearch->fetch())
 {
@@ -183,23 +173,26 @@ $viewSearch=$DB->prepare('CREATE VIEW viewSqlResearch AS SELECT DISTINCT ad.titl
         $resPriority=$askPriority->fetch();
         $priority=$resPriority['priority'];
         $setPriority=$DB->prepare('UPDATE ad SET priority='.$priority.' WHERE ad.id='.$resData['id']);
+        $setPriority->execute();
         
-        $setViewSearch=$DB->prepare('INSERT INTO viewSqlSearch');
+        /*$setViewSearch=$DB->prepare('INSERT INTO viewSqlSearch(title,date_begin,length,picutres,rating,id,prioritiy) VALUES('.$resData['title'].','.$resData['date_begin']
+                .','.$resData['length'].','.$resData['pictures'].','.$resData[''].$resData['']);*/
+      
 }
-        
-        
-        
-        
-        
-        
+$askResearch->closeCursor();
 
-    
-    
-    
-    
-    
-    
-    
-    
+$askPrioritySearch=$DB->prepare('SELECT DISTINCT ad.title, ad.date_begin, house.description, ad.length, house.pictures, house.rating, user.id 
+                                     FROM ad, house, house_area, area, ad_criteria, criteria, user , criteria_house , house_criteria_house 
+                                     WHERE ad.id_house= house.id 
+                                     AND house.id_user=user.id 
+                                     AND house.id=house_area.id_house 
+                                     AND area.id=house_area.id_area 
+                                     AND ad.id=ad_criteria.id_ad 
+                                     AND criteria.id=ad_criteria.id_criteria
+                                     AND criteria_house.id=house_criteria_house.id_criteria_house
+                                     AND house.id=house_criteria_house.id_house'.$req.$ask);
+$askPrioritySearch->execute();
+
+
 
 ?>

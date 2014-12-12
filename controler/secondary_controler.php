@@ -13,7 +13,7 @@ if (isset($page) AND $page!='')
                     }
                     elseif( $_GET['page']=='search_result')
                     {
-                        
+                        echo'<link rel="stylesheet" href="../view/css/search_result.css">';
                     }
                     elseif( $_GET['page']=='home')
                     {
