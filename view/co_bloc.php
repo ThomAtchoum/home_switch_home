@@ -35,12 +35,7 @@
                         break;
                     
                         case 3:
-                        include "../view/co_bloc/co_bloc_3.php";
-                            //A supprimer
-                        echo $_SESSION['userLogin'];
-                        ?> <br/> <?php
-                        echo $_SESSION['userId'];
-                      
+                        include "../view/co_bloc/co_bloc_3.php";                      
 			break;			
                     }
                    

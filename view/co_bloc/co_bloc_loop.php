@@ -22,6 +22,10 @@ if(isset($_POST) AND $_POST['login']!="" AND $_POST['password']!="")
                                 {
                                     $_SESSION['userId']=$resId['id'];
                                 }
+                                while($resPic=$askPic->fetch())
+                                {
+                                    $_SESSION['userPic']=$resPic['picture'];
+                                }
                             }
                     
             }

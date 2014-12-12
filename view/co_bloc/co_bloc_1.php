@@ -1,4 +1,4 @@
-<aside class="button"> 
+<aside class="Cobuttons"> 
     <div>
             <?php $idPage=$_GET['page'] ?>
             <form method='post' action='../controler/content.php?page=<?php echo $idPage ?>' class="co"> <!--Bouton connexion-->

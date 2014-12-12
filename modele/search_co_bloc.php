@@ -16,3 +16,7 @@
     $askId=$bdd->prepare('SELECT id FROM user WHERE login=:login');
         $askId->execute(array('login'=>$_POST['login']));
 ?>
+<?php
+    $askPic=$bdd->prepare('SELECT picture FROM user WHERE login=:login');
+        $askPic->execute(array('login'=>$_POST['login']))
+?>
