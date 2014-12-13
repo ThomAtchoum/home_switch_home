@@ -7,7 +7,6 @@
     </head>
     
     <body>
-        <?php echo $_SESSION['userId']; ?> <!--A effacer !!! -->
                 <section class="RightCol">
                     <form action="../modele/add_house.php" method="post" id="create_house" enctype="multipart/form-data" onSubmit="">
                         <article class='title'> <!--Insert the title-->
