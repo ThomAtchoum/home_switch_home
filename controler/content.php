@@ -106,8 +106,8 @@
                     {
                         //require("../modele/add_house.php"); //modele
                         include("../view/create_house.php"); //view
-                        include("../view/profile_reminder.php");
-                        include("../modele/search_profile_reminder.php");
+                        require("../modele/search_profile_reminder.php"); //view
+                        include("../view/profile_reminder.php"); //modele
                     }
                     
                 }

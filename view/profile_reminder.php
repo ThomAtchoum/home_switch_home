@@ -10,10 +10,10 @@
             <div class="ProfileReminder">
                 <div class="PicCase"> <!--Put the profile photo-->
                     <?php
-                        while ($resPic=$askPic->fetch())
+                        while ($resPicpr=$askPicpr->fetch())
                             {
                     ?>                                                                                                 
-                                <img src="<?php echo $resPic['picture']?>" alt="photo de profil php" class='ProfilePic' />                                
+                                <img src="<?php echo $resPicpr['picture']?>" alt="photo de profil php" class='ProfilePic' />                                
                     <?php
                             }
                     ?>
