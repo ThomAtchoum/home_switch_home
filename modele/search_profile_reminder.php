@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-    <head><title>Profile Reminder</title></head>
-    <body>
         <?php   /*Accès à la bdd*/
             try 
                 {
@@ -69,4 +66,3 @@
         <?php
                 }
         ?>
-    </body>

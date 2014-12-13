@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "../modele/search_profile_reminder.php";
 include "../view/profile_reminder.php";
 

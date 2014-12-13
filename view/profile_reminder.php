@@ -1,19 +1,11 @@
-<!Doctype html>
-    <html>
-        <head>
-            <meta charset="utf-8" />
-            <link rel="stylesheet" href="../view/ccs/profile_reminder.css" />
-            <title> Profile Reminder </title>
-        </head>
-        
-        <body>
+            Variable de session : <?php $_SESSION['userId'] ?> <!-- A effacer !!! -->
             <div class="ProfileReminder">
                 <div class="PicCase"> <!--Put the profile photo-->
                     <?php
-                        while ($resPicpr=$askPicpr->fetch())
+                        while ($resPic=$askPic->fetch())
                             {
                     ?>                                                                                                 
-                                <img src="<?php echo $resPicpr['picture']?>" alt="photo de profil php" class='ProfilePic' />                                
+                                <img src="<?php //echo $resPic['picture']?>" alt="photo de profil php" class='ProfilePic' />                                
                     <?php
                             }
                     ?>
@@ -47,4 +39,3 @@
                     ?>
                 </p>
             </div>
-        </body>
