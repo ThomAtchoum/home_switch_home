@@ -103,15 +103,16 @@
                         include("../view/confirm_add_message.php");//vue
                     }
                     elseif($_GET['page']=='createHouse')
-                    {
-                        if(isset($_SESSION))
+                    {   
+                        if(!isset($_SESSION['userId']))
                         {
-                        //require("../modele/add_house.php"); //modele
-                        include("../view/create_house.php"); //view
+                        echo"Vous ne pouvez pas acéder à cette page. Veuilez vous connecter.";
                         }
                         else
                         {
-                            echo"Vous ne pouvez pas accéder à cette page. Veuillez vous connecter.";
+                        include("../view/create_house.php"); //view
+                        require("../modele/search_profile_reminder.php");
+                        include("../view/profile_reminder.php");
                         }
                     }                    
                 }
