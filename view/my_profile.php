@@ -56,6 +56,4 @@ if(isset($_SESSION)AND $_SESSION['login']==$donnees['login'])
 			<input class="bouton" type="button" value="Voir les commentaires" />
 		</div>
     </body>
-</html>
-
-    
+</html> 

@@ -128,9 +128,7 @@
                     
 		
                     <section class="LeftCol">
-			<article class="RapProf"> <!--Rappel du profil du membre-->
-			<?php   include '../ProfileReminder/profile_reminder_controleur.php'; ?>
-			</article>
+			
 			
 			<article class="DateMM"> <!-- Mettre ici les dates -->
                             <?php
