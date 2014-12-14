@@ -1,3 +1,4 @@
+<!--Attention possibilité de faire une requête imbriquée !!!-Pierre-->
 <?php
 session_start();
     try
@@ -26,6 +27,7 @@ session_start();
 
         $addH=$bdd->prepare("INSERT INTO house(id_user,title,description,location_detail,id_area) VALUES(:idUser,:title,:desc,:town,:idArea)");
             $addH->execute(array('idUser'=>$_SESSION['userId'],'title'=>$_POST['title'],'desc'=>$_POST['description'],'town'=>$_POST['town'],'idArea'=>$idArea));
+        echo"La maison a bien été enregistrée";
     }
     else
     {

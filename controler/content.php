@@ -162,7 +162,7 @@
                             include "../view/modify_hc.php";
                         }    
                     }
-                    elseif($_GET['page']=='creatAd')
+                    elseif($_GET['page']=='createAd')
                     {
                         if(!isset($_SESSION['userId']))
                         {
@@ -172,8 +172,9 @@
                         {
                             require("../modele/search_house_card.php");
                             include("../view/create_ad.php");
-                            require("..modele/search_profile_reminder.php");
+                            require("../modele/search_profile_reminder.php");                            
                             include("../view/profile_reminder.php");
+                            
                         }
                     }
                 }
