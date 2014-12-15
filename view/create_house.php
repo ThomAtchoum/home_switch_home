@@ -7,6 +7,7 @@
     </head>
     
     <body>
+                <?php echo $_SESSION['userId'] ?>
                 <section class="RightCol">
                     <form action="../modele/add_house.php" method="post" id="create_house" enctype="multipart/form-data" onSubmit="">
                         <article class='title'> <!--Insert the title-->
@@ -107,15 +108,6 @@
                         </article>
                         <input type="submit" value="Envoyer le formulaire" class="sub"/>
                     </form>
-                    </section>
-                    
-		
-                    <section class="LeftCol">
-			<article class="RapProf"> <!--Rappel du profil du membre-->
-			<?php   include '../view/profile_reminder.php'; ?>
-			</article>
-			
-                    </section>
-        <?php include"verf_H_form.php" ?>
+                </section>
     </body>
 </html>

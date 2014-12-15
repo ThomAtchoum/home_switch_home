@@ -1,13 +1,9 @@
 <?php
 session_start();
 ?>
-<html>
-    <head>
-        <title>Mon Profil</title>
-        
-        <meta charset="utf-8" />
-    </head>
-    <body>
+
+   
+    
         
 	<h1>Fiche profil</h1>
 <ul>
@@ -57,5 +53,6 @@ if(isset($_SESSION)AND $_SESSION['login']==$donnees['login'])
 		<div>
 			<input class="bouton" type="button" value="Voir les commentaires" />
 		</div>
-    </body>
-</html>
+    
+
+

@@ -138,13 +138,45 @@
                                     
                    
                     elseif($_GET['page']=='createHouse')
-                    {
-                        //require("../modele/add_house.php"); //modele
+                    {   
+                        if(!isset($_SESSION['userId']))
+                        {
+                        echo"Vous ne pouvez pas accéder à cette page. Veuilez vous connecter.";
+                        }
+                        else
+                        {
                         include("../view/create_house.php"); //view
+                        require("../modele/search_profile_reminder.php");
                         include("../view/profile_reminder.php");
-                        include("../modele/search_profile_reminder.php");
+                        }
                     }
-                    
+                    elseif($_GET['page']=='houseCard')
+                    {
+                        include("../modele/search_house_card.php");
+                        if(!isset($_SESSION['userId']) AND $_SESSION['userId']!==$askIdOwner)   // FAUX A REFAIRE !!!!
+                        {
+                            include("../view/house_card.php");
+                        }
+                        else
+                        {
+                            include "../view/modify_hc.php";
+                        }    
+                    }
+                    elseif($_GET['page']=='createAd')
+                    {
+                        if(!isset($_SESSION['userId']))
+                        {
+                            echo"Vous ne pouvez pas accéder à cette page. Veuillez vous connecter";
+                        }
+                        else
+                        {
+                            require("../modele/search_house_card.php");
+                            include("../view/create_ad.php");
+                            require("../modele/search_profile_reminder.php");                            
+                            include("../view/profile_reminder.php");
+                            
+                        }
+                    }
                 }
                 
                    
