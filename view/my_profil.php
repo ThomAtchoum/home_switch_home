@@ -1,18 +1,16 @@
 <?php
-session_start()
+session_start();
 ?>
-<html>
-    <head>
-        <title>Mon Profil</title>
-    </head>
-    <body>
-        <meta charset="utf-8" />
+
+   
+    
+        
 	<h1>Fiche profil</h1>
 <ul>
     <?php
 while ($donnees = $req->fetch())
 {
-	echo '<li>' . $donnees['login'] . $donnees['description'] . $donnees['rating'] . $donnees['picture'] .'</li>';
+	echo '<li>'.$donnees['login'].$donnees['description'].$donnees['rating'].$donnees['picture'].'</li>';
 }
 ?>
 </ul>
@@ -24,8 +22,7 @@ if(isset($_SESSION)AND $_SESSION['login']==$donnees['login'])
 {
     echo $donnees['rating'];
 }
- else 
-{
+
      ?>
      <link rel="stylesheet" href="../RatingSystem/css_rating_system.css" />
         <form method="get" action="../RatingSystem/cible.php">
@@ -46,6 +43,7 @@ if(isset($_SESSION)AND $_SESSION['login']==$donnees['login'])
             </div>
 }
 
+
         
             <br/><input type="submit" value="Noter" />
         </form>
@@ -55,5 +53,6 @@ if(isset($_SESSION)AND $_SESSION['login']==$donnees['login'])
 		<div>
 			<input class="bouton" type="button" value="Voir les commentaires" />
 		</div>
-    </body>
-</html> 
+    
+
+
