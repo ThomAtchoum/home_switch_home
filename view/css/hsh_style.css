@@ -14,7 +14,7 @@ body
         background-size: 100%;
         min-height:900px;
         overflow:auto;
-        
+        padding-bottom: 30px;        
         background-color:#f1f1f1;
 }
 
@@ -34,6 +34,7 @@ body
     background-color:white;
     //background-image: url("pictures/logo.png");
     top:250px;
+    min-height: 100%;
     
     
 }
@@ -73,7 +74,7 @@ footer
         min-width:1280px;
         background-color:#ffffff;
         bottom:0px;
-        
+        position:absolute;
         
 }
 
