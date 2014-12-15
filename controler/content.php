@@ -49,7 +49,7 @@
                     elseif( $_GET['page']=='myProfile')
                     {
                         require("../modele/search_my_profile.php"); //modele
-                        include("../view/my_profile.php");//vue
+                        include("../view/my_profil.php");//vue
                         
                     }
                     elseif( $_GET['page']== 'my_research')
