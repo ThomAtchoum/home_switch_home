@@ -56,15 +56,16 @@
                                         <option value="picardie">Picardie
                                         <option value="poitou_charentes">Poitou Charentes
                                         <option value="PACA">Provence Alpes Côte d'Azur
+                                        <option value="rhone_alpes">Rhône-Alpes
                                  </select><br/>
+                                 
+                                <!--ZipCode-->
+                                <label for='zipcode'>Code Postal :</label>
+                                <input type='number' name='zipcode' id='zipcode' /><br/>
                                 
                                 <!--Town-->
                                 <label for="town"> Ville : </label>
                                 <input type="text" name="town" id="town"/><br/>
-                                
-                                <!--ZipCode-->
-                                <label for='zipcode'>Code Postal :</label>
-                                <input type='number' name='zipcode' id='zipcode' /><br/>
                                 
                                 <!--address-->
                                 <label for='address'> Adresse :</label>
